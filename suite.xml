@@ -1,0 +1,34 @@
+﻿<suite name="遨游旅行App-Android" parallel="tests" thread-count="2">
+
+	<listeners>
+	     <listener class-name="com.aoyou.app.listener.TestngListener" />
+	     <listener class-name="com.aoyou.app.listener.ReportListener" />
+	</listeners>
+	
+	<test name="device1" preserve-order="true">
+	
+	  <parameter name = "udid" value = "192.168.56.101:5555"/>
+      <parameter name = "deviceName" value = "三星S5"/>
+      <parameter name = "platformVersion" value = "4.4.4"/>
+
+	  <classes>
+		<class name="com.aoyou.app.cases.Case001"/>
+		<class name="com.aoyou.app.cases.Case002"/>
+	  </classes>
+	  
+	</test>
+	
+	<test name="device2" preserve-order="true">
+
+	  <parameter name = "udid" value = "192.168.56.102:5555"/>
+      <parameter name = "deviceName" value = "索尼 S55t"/>
+      <parameter name = "platformVersion" value = "4.3"/>
+
+	  <classes>
+		<class name="com.aoyou.app.cases.Case001"/>
+		<class name="com.aoyou.app.cases.Case002"/>
+	  </classes>
+	  
+	</test>
+	
+</suite>		

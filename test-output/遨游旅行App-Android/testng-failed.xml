@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [遨游旅行App-Android]" parallel="tests">
+  <parameter name="platformVersion" value="4.3"/>
+  <parameter name="deviceName" value="索尼 S55t"/>
+  <parameter name="serverPort" value="4725"/>
+  <parameter name="udid" value="192.168.56.102:5555"/>
+  <listeners>
+    <listener class-name="com.aoyou.app.listener.TestngListener"/>
+    <listener class-name="com.aoyou.app.listener.ReportListener"/>
+  </listeners>
+  <test name="device2(failed)" parallel="tests">
+    <parameter name="platformVersion" value="4.3"/>
+    <parameter name="deviceName" value="索尼 S55t"/>
+    <parameter name="serverPort" value="4725"/>
+    <parameter name="udid" value="192.168.56.102:5555"/>
+    <classes>
+      <class name="com.aoyou.app.cases.Case002">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeCase"/>
+          <include name="case002"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.aoyou.app.cases.Case002 -->
+      <class name="com.aoyou.app.cases.Case001">
+        <methods>
+          <include name="case001"/>
+          <include name="beforeCase"/>
+        </methods>
+      </class> <!-- com.aoyou.app.cases.Case001 -->
+    </classes>
+  </test> <!-- device2(failed) -->
+  <test name="device1(failed)" parallel="tests">
+    <parameter name="platformVersion" value="4.4.4"/>
+    <parameter name="deviceName" value="三星S5"/>
+    <parameter name="serverPort" value="4723"/>
+    <parameter name="udid" value="192.168.56.101:5555"/>
+    <classes>
+      <class name="com.aoyou.app.cases.Case002">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeCase"/>
+          <include name="case002"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.aoyou.app.cases.Case002 -->
+      <class name="com.aoyou.app.cases.Case001">
+        <methods>
+          <include name="beforeCase"/>
+        </methods>
+      </class> <!-- com.aoyou.app.cases.Case001 -->
+    </classes>
+  </test> <!-- device1(failed) -->
+</suite> <!-- Failed suite [遨游旅行App-Android] -->
